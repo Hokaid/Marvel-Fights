@@ -18,7 +18,7 @@
 #### Presiona el boton "X" para saltar
 #### Presiona el boton "Options" para pausar el juego
 
-## Descargue el ejecutable "MarvelFightsInstaller.exe" directamente para instalar el juego!!!
+## Descargue el ejecutable "MarvelFightsInstaller.exe" o "MarvelFightsInstaller2.exe" directamente para instalar el juego!!!
 
 # Marvel-Fights Manual (English Version)
 
@@ -40,4 +40,4 @@
 #### Press the "X" button to jump
 #### Press the "Options" button to pause the game
 
-## Download the executable "MarvelFightsInstaller.exe" directly to install the Game!!!
+## Download the executable "MarvelFightsInstaller.exe" or "MarvelFightsInstaller2.exe" directly to install the Game!!!
