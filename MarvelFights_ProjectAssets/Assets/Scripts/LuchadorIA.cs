@@ -32,6 +32,9 @@ public class LuchadorIA : MonoBehaviour {
 		extremoIzq = new Vector3(mCamComp.ScreenToWorldPoint(new Vector3(0,0,0)).x,0,0);
 		extremoDer = new Vector3(mCamComp.ScreenToWorldPoint(new Vector3(Screen.width,180,0)).x,0,0);
 		Inferior = new Vector3(0,mCamComp.ScreenToWorldPoint(new Vector3(0,0,0)).y,0);
+		if (finfo.luchadorIA == finfo.luchadorJ1){
+			pose.color = new Color(1.0f,0.3f,1.0f,1.0f);
+		}
 	}
 	IEnumerator Atacar(){
 		if (dificultad == 1){
@@ -292,6 +295,9 @@ public class LuchadorIA : MonoBehaviour {
 			escape++;
 			golpeado = false;
 			pose.color = Color.white;
+			if (finfo.luchadorIA == finfo.luchadorJ1){
+				pose.color = new Color(1.0f,0.3f,1.0f,1.0f);
+			}
 			alejarse = true;
 			if (jumping == true || dowing == true || escapando == true){
 				pose.sprite = salto[finfo.luchadorIA - 1];
@@ -314,10 +320,16 @@ public class LuchadorIA : MonoBehaviour {
 			if (jumping == true || dowing == true|| escapando == true){
 				pose.sprite = salto[finfo.luchadorIA - 1];
 				pose.color = Color.white;
+				if (finfo.luchadorIA == finfo.luchadorJ1){
+					pose.color = new Color(1.0f,0.3f,1.0f,1.0f);
+				}
 			}
 			else{
 				pose.sprite = poses[5*(finfo.luchadorIA-1)];
 				pose.color = Color.white;
+				if (finfo.luchadorIA == finfo.luchadorJ1){
+					pose.color = new Color(1.0f,0.3f,1.0f,1.0f);
+				}
 			}
 			cont2 = 0;
 		}
@@ -390,6 +402,9 @@ public class LuchadorIA : MonoBehaviour {
 					else{
 						if (j1pose.color == luch1.protec){
 							j1pose.color = Color.white;
+							if (finfo.luchadorIA == finfo.luchadorJ1){
+								pose.color = new Color(1.0f,0.3f,1.0f,1.0f);
+							}
 						}
 					}
 				}
@@ -440,7 +455,7 @@ public class LuchadorIA : MonoBehaviour {
 		pose.color = new Color(1.0f,1.0f,1.0f,0.0f);
 	}
 	void Update () {
-		if (cc2.pausa == false){
+		if (cc2.pausa == false && cc2.instart == false){
 			if (cbarras.gameover == true){
 				if (cbarras.J1lost == false && derrotado == false){
 					StartCoroutine("Derrota");

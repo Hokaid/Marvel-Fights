@@ -61,6 +61,7 @@ public class SelecPress : MonoBehaviour {
 		IAFNtext = IAFName.GetComponent<Text>();
 		SelecNtext = SelecName.GetComponent<Text>();
 		canvasani = gameObject.GetComponent<Animator>();
+		FightInf.escenario = pesc;
 		sescetext.SetActive(false);
 		nescene.SetActive(false);
 		der.SetActive(false);

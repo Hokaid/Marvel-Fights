@@ -73,7 +73,7 @@ public class Luchador1 : MonoBehaviour {
 		pose.color = new Color(1.0f,1.0f,1.0f,0.0f);
 	}
 	void Update () {
-		if (cc2.pausa == false){
+		if (cc2.pausa == false && cc2.instart == false){
 			if (cbarras.gameover == true){
 				if (cbarras.J1lost == true && derrotado == false){
 					StartCoroutine("Derrota");

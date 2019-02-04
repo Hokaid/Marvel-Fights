@@ -9,7 +9,6 @@
 #### Use las flechas del teclado para moverse
 #### Preciona la tecla "espacio" para saltar
 #### Left Ctrl: Pausar el juego
-#### C: Protegerse (cubrirse)
 
 ### Con Dualshock 4:
 
@@ -18,9 +17,8 @@
 #### Use el Joystick derecho del mando para moverse
 #### Presiona el boton "X" para saltar
 #### Presiona el boton "Options" para pausar el juego
-#### Manten presionado el boton "L2" para protegerte de ataques
 
-## Descargue el ejecutable "MarvelFightsInstaller.exe" o "MarvelFightsInstaller2.exe" directamente para instalar el juego!!!
+## Descargue el ejecutable "MarvelFightsInstaller.exe" directamente para instalar el juego!!!
 
 # Marvel-Fights Manual (English Version)
 
@@ -33,7 +31,6 @@
 #### Use the arrow keys to move
 #### Press the "space" key to jump
 #### Left Ctrl: Pause the game
-#### C: Protect yourself (cover)
 
 ### With Dualshock 4:
 
@@ -42,6 +39,5 @@
 #### Use the right Joystick on the handle to move
 #### Press the "X" button to jump
 #### Press the "Options" button to pause the game
-#### Hold down the "L2" button to protect yourself from attacks
 
-## Download the executable "MarvelFightsInstaller.exe" or "MarvelFightsInstaller2.exe" directly to install the Game!!!
+## Download the executable "MarvelFightsInstaller.exe" directly to install the Game!!!

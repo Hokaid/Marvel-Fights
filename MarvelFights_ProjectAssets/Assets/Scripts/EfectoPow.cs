@@ -50,7 +50,7 @@ public class EfectoPow : MonoBehaviour {
 					altpowGOi.sprite = pows[2];
 					ausou.clip = clips[0];
 				}
-				else{
+				else {
 					pow1GOi.sprite = pows[1];
 					altpowGOi.sprite = pows[3];
 					ausou.clip = clips[1];
@@ -58,15 +58,16 @@ public class EfectoPow : MonoBehaviour {
 				pow1GOi.color = new Color(1.0f,1.0f,1.0f,1.0f);
 				altpowGOi.color = new Color(1.0f,1.0f,1.0f,1.0f);
 				do{
-					pow1GOt.localPosition = new Vector3(Random.Range(-412.0f,412.0f),Random.Range(-320.0f,210.0f),8.75f);
-					altpowGOt.localPosition = new Vector3(Random.Range(-412.0f,412.0f),Random.Range(-320.0f,210.0f),8.75f);
+					pow1GOt.localPosition = new Vector3(Random.Range(-300,300),Random.Range(-100,100),8.75f);
+					altpowGOt.localPosition = new Vector3(Random.Range(-300,300),Random.Range(-100,100),8.75f);
 				} while (pow1GOt.position == altpowGOt.position);
 				StartCoroutine("Pow");
 				ausou.Play();
 				Powie = true;
 			}
 			else if (luch1.golpeado == true){
-				if (luchia.tipo_golpe == 1){
+				int randi = Random.Range(1,3);
+				if (randi == 1){
 					pow1GOi.sprite = pows[0];
 					altpowGOi.sprite = pows[2];
 					ausou.clip = clips[0];
@@ -79,8 +80,8 @@ public class EfectoPow : MonoBehaviour {
 				pow1GOi.color = new Color(1.0f,1.0f,1.0f,1.0f);
 				altpowGOi.color = new Color(1.0f,1.0f,1.0f,1.0f);
 				do{
-					pow1GOt.localPosition = new Vector3(Random.Range(-412.0f,412.0f),Random.Range(-320.0f,210.0f),8.75f);
-					altpowGOt.localPosition = new Vector3(Random.Range(-412.0f,412.0f),Random.Range(-320.0f,210.0f),8.75f);
+					pow1GOt.localPosition = new Vector3(Random.Range(-300,300),Random.Range(-100,100),8.75f);
+					altpowGOt.localPosition = new Vector3(Random.Range(-300,300),Random.Range(-100,100),8.75f);
 				} while (pow1GOt.position == altpowGOt.position);
 				StartCoroutine("Pow");
 				ausou.Play();

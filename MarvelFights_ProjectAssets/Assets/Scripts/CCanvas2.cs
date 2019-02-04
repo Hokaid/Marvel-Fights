@@ -4,11 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class CCanvas2 : MonoBehaviour {
-	GameObject J1name, IAname, pauUi, mpau, oscu;
-	Image ioscu;
+	GameObject J1name, IAname, pauUi, mpau, oscu, osce, begin;
+	Image ioscu, iosce;
 	Text tJ1name, tIAname;
-	Fightinfo finfo; public bool pausa = false;
+	Fightinfo finfo; public bool pausa = false, instart = true;
 	void Start () {
+		begin = GameObject.Find("Begin");
+		osce = GameObject.Find("Oscure");
+		iosce = osce.GetComponent<Image>();
 		oscu = GameObject.Find("Oscurecido2");
 		ioscu = oscu.GetComponent<Image>();
 		pauUi = GameObject.Find("PausaUI");
@@ -40,6 +43,7 @@ public class CCanvas2 : MonoBehaviour {
 			case 7: tIAname.text = "Ironman"; tIAname.color = new Color(0.0f,0.25f,1.0f,1.0f); break;
 			case 8: tIAname.text = "Venom"; tIAname.color = new Color(0.15f,0.3f,0.2f,1.0f); break;
 		}
+		StartCoroutine("Stari");
 	}
 	public void Reanudar(){
 		mpau.SetActive(false);
@@ -50,6 +54,17 @@ public class CCanvas2 : MonoBehaviour {
 		if (Input.GetButtonUp("Pausa")) {
 			Pausa();
         }
+	}
+	IEnumerator Stari(){
+	    float transparencia = 0.6f;
+		for (int i = 0; i < 15; i++){
+			transparencia = transparencia - 0.04f;
+			iosce.color = new Color(0.0f, 0.0f, 0.0f, transparencia);
+			yield return new WaitForSeconds(0.125f);
+		}
+		begin.SetActive(false);
+		osce.SetActive(false);
+		instart = false;
 	}
 	IEnumerator Pausar(){
 		float color = 1.0f, transparencia = 0.0f;
